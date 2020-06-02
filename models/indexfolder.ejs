@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <%= url %>
+    <%= path %>
+    <h2>Files</h2>
+    <div class="container-y">
+      <% files.forEach(function(file){ %>
+          <div class="file">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+            <a href="<%= file  %>"><%= file  %></a>
+          </div>
+      <% }); %>
+    </div>
+  </body>
+</html>
+
+<style>
+/* Layout */
+body{
+  width: 100%;
+  margin: auto; 
+}
+.container-y{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-x{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.row{
+    flex-basis: 100%;
+}
+.folder, .file{
+  width: 48%;
+  margin:5px;
+  padding:2px;
+  border:1px solid black;
+}
+</style>

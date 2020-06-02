@@ -1,0 +1,187 @@
+body {
+  background-color: #232323;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+button:focus {
+  outline: none;
+}
+#add {
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+}
+
+
+/* Layout */
+.container-y {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-x {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  flex-basis: 100%;
+}
+
+
+/* Colors */
+.txt-white {
+  color: white;
+}
+.txt-grey {
+  color: rgb(146, 146, 146);
+}
+.txt-primay {
+  color: rgb(16, 177, 185);
+}
+.txt-secondary {
+  color: rgb(2, 175, 127);
+}
+.bg-primary {
+  background-color: rgb(16, 177, 185);
+}
+.bg-secondary {
+  background-color: rgb(2, 175, 127);
+}
+.bg-grey {
+  background-color: rgb(119, 119, 119);
+}
+
+/* Header */
+header {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+
+}
+header h1{
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(2, 175, 127, 0.5);
+}
+
+/* Options */
+#options h1 {
+}
+
+.top {
+  border-top: 1px solid rgb(2, 175, 127);
+  color: rgb(2, 175, 127);
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 100ms all ease;
+}
+.top button{
+  background: none;
+  border: none;
+  display: flex;
+}
+.top:hover {
+  background-color: rgb(2, 175, 127);
+  color: white;
+}
+ .active{
+  background-color: rgb(2, 175, 127);
+  color: white;
+}
+#pop ul {
+  list-style: none;
+  position: absolute;
+  z-index: 99;
+  background-color: rgb(2, 175, 127);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+li.selectserv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(2, 175, 127);
+  padding: 10px;
+  margin: 15px 0;
+  height: 70px;
+  transition: 100ms all ease;
+  cursor: pointer;
+}
+li.selectserv:hover {
+  background-color: rgb(3, 112, 81);
+}
+
+li > div span:first-child {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+li > div span:last-child {
+  font-size:15px;
+  color: #232323;
+}
+/* Section */
+section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px 1px 1px 15px;
+  background-color: #313131;
+  margin: 10px;
+  border: 1px solid #2424247a;
+  align-items: center;
+  box-shadow: 0 0 8px 0px #00000042;
+}
+section .online {
+  border: 1px solid #00ff007a;
+}
+section .name {
+  font-size: 2em;
+}
+input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+.del {
+  cursor: pointer;
+  background-color: #00000054;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  transition: 100ms all ease;
+}
+.del:hover {
+  background-color: #5d040454;
+}
+.io {
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 35px;
+  border-color: transparent transparent transparent rgb(2, 175, 127);
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 20px 0px 20px 36px;
+}
+.io.paused {
+  border-width: 0px 0 0px 36px;
+  border-color: transparent transparent transparent rgb(125, 39, 39);
+}
+.io:hover {
+  border-color: transparent transparent transparent #404040;
+}
+.ip{
+  color: rgb(146, 146, 146);
+  text-decoration: none;
+}
+.green{
+  color: rgb(2, 175, 127);
+  text-decoration: none;
+}

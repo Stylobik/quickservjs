@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <%= url %>
+    <%= path %>
+    <h2>Folders</h2>
+
+    <div class="container-y">
+      <% files.children.forEach(function(file){ %>
+        <%if (file.type === 'folder') { %>
+          <div class="folder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.17 6l2 2H20v10H4V6h5.17M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+            <a href="<%= file.name  %>"><%= file.name  %></a>
+          </div>
+        <% } %>
+      <% }); %>
+    </div>
+    <h2>Files</h2>
+
+    <div class="container-y">
+      <% files.children.forEach(function(file){ %>
+        <%if (file.type === 'file') { %>
+          <div class="file">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+            <a href="<%= file.name  %>"><%= file.name  %></a>
+          </div>
+        <% } %>
+      <% }); %>
+    </div>
+  </body>
+</html>
+
+<style>
+/* Layout */
+body{
+  width: 100%;
+  margin: auto; 
+}
+.container-y{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-x{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.row{
+    flex-basis: 100%;
+}
+.folder, .file{
+  width: 48%;
+  margin:5px;
+  padding:2px;
+  border:1px solid black;
+}
+</style>

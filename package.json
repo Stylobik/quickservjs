@@ -1,0 +1,23 @@
+{
+  "name": "quickservjs",
+  "version": "0.1.0",
+  "description": "Share folders and files on lan",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . quickservjs --overwrite --platform=win32 --arch=x64 --prune=true --out=dist"
+  },
+  "repository": "",
+  "author": "tomlrd",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^8.0.1",
+    "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "ejs-electron": "^2.0.3",
+    "electron-store": "^5.1.1",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1"
+  }
+}

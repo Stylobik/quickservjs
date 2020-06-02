@@ -2,7 +2,7 @@
 
 ## Work in progress
 
-![screen](https://raw.githubusercontent.com/Stylobik/touchpad-sc/dev/public/screen.png)
+![screen](https://raw.githubusercontent.com/Stylobik/quickservjs/dev/Screenshot_1.png)
 
 ```bash
 npm i && npm start
